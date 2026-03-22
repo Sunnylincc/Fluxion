@@ -23,8 +23,8 @@ Fluxion is **not** an app-layer chatbot demo. The repository centers on runtime 
 flowchart TB
     Client --> API[FastAPI API Layer]
     API --> RM[Request Manager]
-    RM --> SCHED[Token Scheduler\n(prefill queue + decode queue)]
-    SCHED --> PLANNER[Multi-device Planner\n(headroom + load + constraints)]
+    RM --> SCHED["Token Scheduler<br/>prefill queue + decode queue"]
+    SCHED --> PLANNER["Multi-device Planner<br/>headroom + load + constraints"]
     PLANNER --> CPU[CPU Backend]
     PLANNER --> GPU[Mock GPU Backend]
     PLANNER --> ACC[Mock Accelerator Backend]
