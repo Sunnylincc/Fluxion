@@ -1,0 +1,20 @@
+devices:
+  - name: cpu-0
+    type: cpu
+    memory_capacity_blocks: 2048
+    prefill_ms_per_token: 0.7
+    decode_ms_per_token: 0.5
+  - name: gpu-0
+    type: mock_gpu
+    memory_capacity_blocks: 8192
+    prefill_ms_per_token: 0.22
+    decode_ms_per_token: 0.12
+    host_to_device_ms_per_kb: 0.01
+    device_to_host_ms_per_kb: 0.005
+  - name: accel-0
+    type: mock_accelerator
+    memory_capacity_blocks: 3072
+    prefill_ms_per_token: 0.35
+    decode_ms_per_token: 0.09
+    host_to_device_ms_per_kb: 0.04
+    device_to_host_ms_per_kb: 0.03
