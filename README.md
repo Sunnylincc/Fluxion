@@ -21,17 +21,17 @@ Fluxion is **not** an app-layer chatbot demo. The repository centers on runtime 
 
 ```mermaid
 flowchart TB
-    Client --> API[FastAPI API Layer]
-    API --> RM[Request Manager]
+    Client --> API["FastAPI API Layer"]
+    API --> RM["Request Manager"]
     RM --> SCHED["Token Scheduler<br/>prefill queue + decode queue"]
     SCHED --> PLANNER["Multi-device Planner<br/>headroom + load + constraints"]
-    PLANNER --> CPU[CPU Backend]
-    PLANNER --> GPU[Mock GPU Backend]
-    PLANNER --> ACC[Mock Accelerator Backend]
-    SCHED --> KVC[KVCacheManager]
-    KVC --> CPP[BlockAllocator (C++/pybind11)]
-    SCHED --> MET[Metrics Collector]
-    MET --> BENCH[Benchmark Matrix]
+    PLANNER --> CPU["CPU Backend"]
+    PLANNER --> GPU["Mock GPU Backend"]
+    PLANNER --> ACC["Mock Accelerator Backend"]
+    SCHED --> KVC["KVCacheManager"]
+    KVC --> CPP["BlockAllocator C++ pybind11"]
+    SCHED --> MET["Metrics Collector"]
+    MET --> BENCH["Benchmark Matrix"]
 ```
 
 ## Repository Layout
